@@ -1,0 +1,12 @@
+Source: ros-indigo-camera1394stereo
+Section: misc
+Priority: extra
+Maintainer: Miquel Massot <miquel.massot@uib.es>
+Build-Depends: debhelper (>= 9.0.0), libdc1394-22-dev, ros-indigo-camera-info-manager, ros-indigo-catkin, ros-indigo-driver-base, ros-indigo-dynamic-reconfigure, ros-indigo-image-transport, ros-indigo-nodelet, ros-indigo-tf
+Homepage: http://ros.org/wiki/camera1394stereo
+Standards-Version: 3.9.2
+
+Package: ros-indigo-camera1394stereo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-camera-info-manager, ros-indigo-driver-base, ros-indigo-dynamic-reconfigure, ros-indigo-image-transport, ros-indigo-nodelet, ros-indigo-tf
+Description: This is a modified version of the ROS driver for devices supporting the IEEE 1394 Digital Camera (IIDC) protocol in package camera1394. It adds support for reading from stereo pairs.

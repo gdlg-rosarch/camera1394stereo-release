@@ -1,3 +1,24 @@
+## foo (indigo) - 1.0.3-1
+
+The packages in the `foo` repository were released into the `indigo` distro by running `/usr/bin/bloom-release foo --track indigo --rosdistro indigo` on `Mon, 19 Oct 2015 11:26:28 -0000`
+
+The `camera1394stereo` package was released.
+
+Version of package(s) in repository `foo`:
+- upstream repository: https://github.com/srv/camera1394stereo.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `1.0.3-0`
+- new version: `1.0.3-1`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.2`
+- vcstools version: `0.1.38`
+
+
 ## camera1394stereo (indigo) - 1.0.3-0
 
 The packages in the `camera1394stereo` repository were released into the `indigo` distro by running `/usr/bin/bloom-release camera1394stereo --track indigo --rosdistro indigo --new-track` on `Thu, 28 Aug 2014 11:06:04 -0000`

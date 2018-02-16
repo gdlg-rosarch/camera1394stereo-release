@@ -3,7 +3,6 @@ project(camera1394stereo)
 
 find_package(catkin REQUIRED COMPONENTS 
 	camera_info_manager 
-	driver_base 
 	dynamic_reconfigure 
 	image_transport 
 	nodelet 
@@ -55,27 +54,32 @@ endif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
 
 add_executable(camera1394stereo_node src/nodes/camera1394stereo_node.cpp ${DRIVER_SOURCES})
 add_dependencies(camera1394stereo_node camera1394stereo_gencfg) 
-add_dependencies(camera1394stereo_node camera1394stereo_EXPORTED_TARGETS) 
 target_link_libraries(camera1394stereo_node ${DC1394} ${catkin_LIBRARIES})
 
 add_library(camera1394stereo_nodelet src/nodes/nodelet.cpp ${DRIVER_SOURCES})
 add_dependencies(camera1394stereo_nodelet camera1394stereo_gencfg) 
-add_dependencies(camera1394stereo_nodelet camera1394stereo_EXPORTED_TARGETS) 
 target_link_libraries(camera1394stereo_nodelet ${DC1394} ${catkin_LIBRARIES})
 
-# driver unit tests
-#
-#  * When -DDEVICE_TEST=true is configured: run tests that require
-#    some real 1394 camera to be attached.
-#
-#  * Otherwise, run only tests that require no attached camera, as is
-#    done on the ROS build machines.
-#
+## Mark executables and/or libraries for installation
+install(TARGETS camera1394stereo_node camera1394stereo_nodelet
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
-#if (${DEVICE_TEST})
-#  add_rostest(tests/camera_node_hz.test)
-#  add_rostest(tests/camera_nodelet_hz.test)
-#endif (${DEVICE_TEST})
+## Mark cpp header files for installation
+install(DIRECTORY src/nodes
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
+  PATTERN ".svn" EXCLUDE
+)
 
-#add_rostest(tests/no_device_node.test)
-#add_rostest(tests/no_device_nodelet.test)
+## Mark other files for installation (e.g. launch and bag files, etc.)
+install(FILES
+  launch/stereo_camera_full.launch
+  launch/stereo_camera.launch
+  launch/nodelet_manager.launch
+  launch/nodelet_standalone.launch
+  launch/nodelet_pipeline.launch
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)

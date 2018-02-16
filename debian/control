@@ -1,0 +1,13 @@
+Source: ros-kinetic-camera1394stereo
+Section: misc
+Priority: extra
+Maintainer: Miquel Massot <miquel.massot@uib.es>
+Build-Depends: debhelper (>= 9.0.0), libdc1394-22-dev, ros-kinetic-camera-info-manager, ros-kinetic-catkin, ros-kinetic-dynamic-reconfigure, ros-kinetic-image-transport, ros-kinetic-nodelet, ros-kinetic-tf
+Homepage: http://ros.org/wiki/camera1394stereo
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-camera1394stereo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-camera-info-manager, ros-kinetic-dynamic-reconfigure, ros-kinetic-image-transport, ros-kinetic-nodelet, ros-kinetic-tf
+Description: This is a modified version of the ROS driver for devices supporting the IEEE 1394 Digital Camera (IIDC) protocol in package camera1394.
+ It adds support for reading from stereo pairs.

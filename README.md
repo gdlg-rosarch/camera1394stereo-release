@@ -1,3 +1,26 @@
+## camera1394stereo (kinetic) - 1.0.6-0
+
+The packages in the `camera1394stereo` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release camera1394stereo --track kinetic --rosdistro kinetic --new-track` on `Fri, 16 Feb 2018 11:54:46 -0000`
+
+The `camera1394stereo` package was released.
+
+Version of package(s) in repository `camera1394stereo`:
+
+- upstream repository: https://github.com/srv/camera1394stereo.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.0.6-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.2`
+- catkin_pkg version: `0.4.1`
+- rosdep version: `0.11.8`
+- rosdistro version: `0.6.6`
+- vcstools version: `0.1.39`
+
+
 ## camera1394stereo (indigo) - 1.0.3-3
 
 The packages in the `camera1394stereo` repository were released into the `indigo` distro by running `/usr/bin/bloom-release camera1394stereo --track indigo --rosdistro indigo` on `Mon, 19 Oct 2015 15:08:14 -0000`
